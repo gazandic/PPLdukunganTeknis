@@ -4,7 +4,13 @@ dibuat oleh gazandi cahyadarma
  -->
 
 <?php 
+    session_start();
+    if($_SESSION["user"]!="admin"){
+        header("Location: ../index.php");
+        exit();
+    }
         require_once '../conf.php';?>
+    
 <html >    
     <head>
         <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
@@ -52,7 +58,7 @@ dibuat oleh gazandi cahyadarma
         </form>
         </div>
         <ul style="float: right; margin-top:8px; margin-right: 70px;">
-        <li><a href="Logout">Logout</a></li>
+        <li><a href="../controller/logout.php">Logout</a></li>
         </ul>
         </div>
     </div>

@@ -5,12 +5,12 @@ dibuat oleh gazandi cahyadarma
 <?php 
 	require_once '../model/model.php';
     $Model = new Model();
-    	$keyword = $Model->getFromLink($_POST['keyword']);
-    	$jenis = $Model->getFromLink($_POST['jenis']);
+        $keyword = $Model->getFromLink($_POST['keyword']);
+        $jenis = $Model->getFromLink($_POST['jenis']);
     	switch ($jenis) {
     		case 'barang':
     			header("Location: ../view/barang.php?keyword=$keyword");
-    			break;
+                break;
     		
     		case 'peminjaman':
     			header("Location: ../view/peminjaman.php?keyword=$keyword");
