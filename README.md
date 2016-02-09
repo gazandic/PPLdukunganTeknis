@@ -1,2 +1,3 @@
 # PPLdukunganTeknis
-Membuat PPL dengan solo 
+Web untuk memenuhi tugas besar PPL 1 
+MIT Licensed

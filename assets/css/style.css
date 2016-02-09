@@ -1,0 +1,744 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 19, 2015, 8:18:13 PM
+    Author     : gazandic
+*/
+html,body{
+   zoom: 90%; 
+    width: 100%;
+    min-width: 100%;
+    left:0;
+    position: relative;
+    background-color: #f5f5f5;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+}
+header{
+    width:100%;
+}
+hr{
+    height: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-width: 1px 0 0;
+    border-style: solid none none;
+    border-color : #e7e7e7;
+/*    border : 1px solid #e7e7e7;*/
+    width:100%;
+}
+#loginhr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:-6%;
+    border : 3px solid #f5f5f5;
+    width:112%;
+}
+
+#logo{
+    position :relative;
+    top:20px;
+}
+.kategoribar{
+    position:relative;
+    /*left:-50px;*/
+    border-radius:5px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/
+    top:2px;
+    border: 2px solid #f5f5f5;
+    line-height: 2;
+    font-size: 14px;
+    padding:5px 10px;
+    background: white;
+}
+#promo{
+    left:0;
+    height:600px;
+    background: #f5f5f5;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 110px;
+    position: relative; 
+    width: 100%;
+    overflow: hidden;
+}
+#jumbo{
+    text-align: center;
+    display:inline-block;
+    overflow: hidden;
+    width:1000px;
+    height: 94%;
+    position: relative;
+}
+#listtesti{
+    text-align: center;
+    display:inline-block;
+    overflow: hidden;
+    width:400px;
+    height: 330px;
+    background-color: white;
+    padding: 10px 60px ;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    border: 1px solid #e7e7e7;
+    position: relative;
+}
+.revname:hover{
+    color: #1b4ac1;
+}
+#slideshow-wrap{
+   position: absolute; 
+   top: 80%;
+   width: 100%; 
+   z-index: 100;
+}
+#slideshow-wrap input[type=radio]{
+    display:none;
+}
+#slideshow-wrap input[type=radio] + label {
+    color:black;
+}
+#slideshow-wrap input[type=radio] + label span {
+    background-color:white;
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+#slideshow-wrap input[type=radio]:checked + label span{
+    background-color:#00aeef;
+}
+#jumbotron{
+    border-radius:20px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/
+   position: absolute;
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%; 
+    max-height: 100%;
+}
+#SSbutton {
+	position:relative; 
+	border-radius:5px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/ 
+  top:2px;
+   border: 2px solid #fdeb1d;
+  line-height: 2;
+  font-size: 14px;
+  padding:0 10px;
+	background: #fcea1c; /* Old browsers */
+	color:black;
+	cursor: pointer;
+}
+#SeeAll {
+  display: inline-block;
+  width: 100px;
+  margin-top:30px;
+  margin-bottom: 100px;
+	position:relative; 
+	border-radius:5px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/ 
+  top:10px;
+   border: 2px solid #fdeb1d;
+  line-height: 2;
+  font-size: 16px;
+  padding:0 10px;
+	background: #fcea1c; /* Old browsers */
+	color:black;
+	cursor: pointer;
+}
+
+#SeeAll:hover{
+   background: #fcff2f;  
+}
+#SSbutton:hover{
+   background: #fcff2f; 
+}
+#judul{
+/*   line-height: 2;*/
+  font-size: 20px; 
+  margin-top: 30px;
+  color: #00aeef;
+  font-family: "Myriad Pro";
+}
+
+#navcontainer { 
+   text-align: center;
+   line-height:60px;
+   position: fixed;
+   z-index: 999;
+   overflow: hidden;
+}
+#headerframe{
+    list-style-type: none;
+    margin: 0 auto;
+    /*padding:0;*/
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #00aeef;
+}
+.brand{
+    margin:0 auto; 
+    display:inline-block;
+    text-align: center;
+    padding:0 15px 0 15px;
+}
+.searchform{
+    margin:0 auto; 
+    display:inline-block;
+    text-align: center;
+    padding:0 15px 0 15px;
+}
+#navcontainer ul {
+    margin:0 auto; 
+    display:inline-block;
+    text-align: center;
+}
+#navcontainer ul li { 
+    margin:0 auto; 
+    display:inline-block;
+    text-align: center;
+    padding:0 15px 0 15px;
+}
+#navcontainer li a {     
+    padding: 0px 0px ;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+#navcontainer li a:hover { 
+    color: #fcea1c;
+}
+#testimoniframe { 
+   width:100%;
+   background-color: #f5f5f5;
+    text-align: center;
+   position: relative;
+}
+
+.logindropdown{
+  display: inline-block;
+  text-align: center;
+  position: fixed;
+  width: 270px;
+  margin-left: -144px;
+  top: 70px;
+  z-index: 999;    
+  background: #fff;
+  padding: 15px;
+  border: 6px solid #f5f5f5;
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
+  border-radius: 3px 0 3px 3px;
+  
+}
+
+.logindropdown:before {
+  position: absolute;
+  top: -18px;
+  margin-left:-6px;
+  display: inline-block;
+  border-right: 18px solid transparent;
+  border-bottom: 18px solid #f5f5f5;
+  border-left: 18px solid transparent;
+  content: '';
+}
+
+.logindropdown:after {
+  position: absolute;
+  top: -12px;
+  display: inline-block;
+  border-right: 12px solid transparent;
+  border-bottom: 13px solid #ffffff;
+  border-left: 12px solid transparent;
+  content: '';
+}
+.logindropdown input {
+  width: 238px;
+  margin-top:0px;
+  margin-bottom: 0px;
+}
+.show {display:block;}
+#testimoni { 
+   display:inline-block;
+   width:1000px;
+   margin-bottom: 50px;
+}
+#testimoni br{
+    line-height: 2;
+}
+#kenapaframe { 
+   width:100%;
+   background-color: white;
+    text-align: center;
+   position: relative;
+}
+#kenapa { 
+    display:inline-block;
+   width:1000px;
+}
+#kenapa br{
+    line-height: 2;
+}
+#kenapa table{
+    display:inline-block;
+    text-align: center;
+    border: 2px solid #f5f5f5;
+    margin-top:-10px;
+}
+
+#kenapa td{
+   font-family: "Myriad Pro";
+   padding: 10px 10px 20px;
+  
+   vertical-align: text-top;
+    color:#5f6061;
+   border: 2px solid #f5f5f5;
+}
+#kenapa td:hover{
+    background-color: #f5f5f5;
+ 
+}
+#kenapa td h3{
+   font-style: italic;
+   color:#00aeef;
+}
+#footerframe { 
+   left:0;
+   margin:0 auto;
+   width:100%;
+   background-color: #3e3e3e;
+   text-align: center;
+   position: absolute;
+}
+#footer { 
+   display:inline-block;
+   width:1000px;
+   line-height:22px;
+}
+#tombolfooter{
+    position:relative;
+    border-radius:20px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/
+   padding : 10px 0px;
+    border: 2px solid #f5f5f5;
+    font-size: 14px;
+    width:200px;
+    background: #3e3e3e;
+}
+#tombolfooter:hover{
+    color: #4e4e4e;
+    background: white;
+}
+#menufooter{
+   text-align: left;
+   margin-top: 30px;
+   margin-left:50px;
+   color: #f5f5f5;
+   font-size: 20px;
+   font-family: "Myriad Pro";
+}
+#hakcipta{
+   color: #a1a1a1;
+   font-size: 14px;
+   padding: 20px 0px 20px 0px;
+   font-family: "Myriad Pro";
+   text-align: center;
+}
+#footer td{
+    vertical-align: text-top;
+}
+#footerlogo{
+    margin-top:30px;
+   filter: brightness(90%);
+}
+#footerlogo:hover{
+    margin-top:30px;
+   filter: brightness(100%);
+}
+#footer ul { 
+    list-style-type: none;
+    padding:0;
+    overflow: hidden;
+}
+#footer ul li {  
+    margin-left:50px;
+    text-align: left;
+    padding:6px 2px 0 2px;
+}
+#footer li a {     
+    font-size: 14px;
+    color: #bfbfbf;
+    text-align: center;
+    text-decoration: none; 
+    font-family: "Myriad Pro";
+}
+#footer li a:hover { 
+    color: #f5f5f5;
+}
+#hotframe{
+    background-color: white;
+    width: 100%;
+    min-height: 440px;
+}
+#hot{
+    text-align: center;
+    margin-top: 30px;
+    list-style-type: none;
+    margin: 0 auto;
+    padding:0;
+    position: relative;
+    width: 1200px;
+    overflow: hidden;
+}
+#kotak{
+    text-align: center;
+    display:inline-block;
+    overflow: hidden;
+    position: relative;
+    margin-left:13px;
+    margin-right: 13px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    height:310px;
+    width:300px;
+}
+#kotaktesti{
+    text-align: center;
+    display:inline-block;
+    overflow: hidden;
+    position: relative;
+    margin-left:13px;
+    margin-right: 13px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    height:310px;
+    width:300px;
+}
+#kotakgambar{
+   position: absolute;
+   filter: brightness(80%);
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%; 
+    max-height: 100%;
+}
+.searchbar {  
+  border-radius:3px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/ 
+  border: 2px solid #f5f5f5;
+  line-height: 2;
+  width:300px;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: "Myriad Pro";
+}
+#namaprodukgambar{ 
+   color: white;
+   text-shadow: 1px 1px black;
+   font: bold 30px "Myriad Pro", Sans-Serif; 
+   padding: 10px; 
+}
+#ketproduk{ 
+   color: white; 
+   text-shadow: 1px 1px black;
+   font: 16px "Myriad Pro", Sans-Serif;   
+   padding: 10px; 
+}
+#namaproduk{ 
+   position: absolute; 
+   top: 30%;
+   left:0%;
+   width: 100%; 
+}
+#hargagambar{ 
+   color: white; 
+   font: bold 20px "Myriad Pro", Sans-Serif;   
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+#harga { 
+   position: absolute; 
+   top: 70%; 
+   left:-86px;
+   width: 100%; 
+}
+#kotakgambar:hover{
+    filter: brightness(50%);
+}
+#navcontainerproduk { 
+      /* Allow the centering to work */
+      text-align: center;
+      line-height:40px;
+}
+#navcontainerproduk ul { 
+    z-index: 990;
+    box-shadow: 0px 2px 5px #d4d4d4;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    position: fixed;
+    top: 71px;
+    left:0;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+#navcontainerproduk ul li { 
+     display:inline-block;
+}
+#navcontainerproduk li a { 
+    color: #5f6061;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none; 
+    font-family: "Myriad Pro";
+}
+#navcontainerproduk li a:hover { 
+    color: black;
+     background-color: #f5f5f5;
+}
+#panelmasuk { 
+   background-color: white;
+   text-align: center;
+   position: relative;
+   width:500px;
+   margin:0 auto;
+   margin-top: 150px;
+   margin-bottom:50px;
+   border : 1px solid #e7e7e7;
+}
+#register { 
+   display:inline-block; 
+   width: 500px;
+   font-size: 16px;
+}
+#fbdaftar {
+  display: inline-block;
+  width: 230px;
+  margin-top:20px;
+	position:relative; 
+	border-radius:5px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/
+  line-height: 2;
+  font-size: 14px;
+  padding:10px 10px;
+	background: #1b4a91; /* Old browsers */
+	color:white;
+	cursor: pointer;
+}
+#gogldaftar {
+  display: inline-block;
+  width: 230px;
+  margin-top:20px;
+	position:relative; 
+	border-radius:5px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/
+  line-height: 2;
+  font-size: 14px;
+  padding:10px 10px;
+	background: #fe2c3b; /* Old browsers */
+	color:white;
+	cursor: pointer;
+}
+
+#akundaftar {
+  margin-bottom: 60px;
+  display: inline-block;
+  width: 300px;
+  margin-top:20px;
+	position:relative; 
+	border-radius:5px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/
+  line-height: 2;
+  font-size: 14px;
+  padding:10px 10px;
+	background: #fcea1c; /* Old browsers */
+	color:black;
+	cursor: pointer;
+}
+#akundaftar:hover{
+   background: #fcff2f; 
+}
+.form{
+   width : 300px;
+   line-height: 2;
+    padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  margin-bottom: 40px;
+  margin-top:30px;
+}
+.radio{
+  margin-bottom: 40px;
+  margin-left: 70px;
+  margin-top:30px;
+}
+.form:focus,
+.form.focus {
+  border: solid 1px #00aeef;
+  box-shadow: 0 0 5px 1px #00aeef;
+}
+.checkbox:hover{
+   border: solid 1px #00aeef;
+  box-shadow: 0 0 5px 1px #00aeef; 
+}
+.submit {
+	position:relative; 
+	border-radius:5px; 
+	-moz-border-radius:15px; 
+	/*-webkit-border-radius:15px;*/
+   border: 2px solid #fdeb1d;
+  line-height: 2;
+  font-size: 14px;
+  padding:0 10px;
+	background: #fcea1c; /* Old browsers */
+	color:black;
+	cursor: pointer;
+}
+.submit:hover{
+   background: #fcff2f; 
+}
+#panel { 
+   background-color: white;
+   text-align: center;
+   position: relative;
+   width:1000px;
+   margin:0 auto;
+   border: 1px solid #e7e7e7; 
+   margin-bottom:50px;
+}
+#navmenu {
+    text-align: left;
+    
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#navmenu a {
+    color: #5f6061;
+    text-decoration: none;
+    margin-left: 10px;
+}
+#dalampanel { 
+   display:inline-block; 
+   width: 100%;
+   font-size: 16px;
+    margin-top: 20px;
+}
+#fotomini{
+    margin-top:20px;
+}
+ 
+#kotakproduk{
+    text-align: center;
+    display:inline-block;
+    overflow: hidden;
+    position: relative;
+    margin-left:13px;
+    margin-right: 13px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    height:440px;
+    width:600px;
+}
+#kotakproduk2{
+    text-align: center;
+    display:inline-block;
+    overflow: hidden;
+    position: relative;
+    margin-left:13px;
+    margin-right: 13px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    height:110px;
+    border:4px solid #d1d1d1;
+    width:140px;
+}
+#kotakproduk2:active{border:4px solid #333 !important;}
+#kotakgambarp , #kotakgambarutama{
+   position: absolute;
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%; 
+    max-height: 100%;
+}
+#keteranganproduk{
+    text-align: center;
+    display:inline-block;
+    position: relative;
+    margin-left:13px;
+    margin-right: 13px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+#hargaproduk{
+    margin-right: 30px;
+    text-align:right;
+}
+#spanharga{ 
+   color: white; 
+   font: bold 20px "Myriad Pro", Sans-Serif;   
+   background: #00aeef;
+   padding: 10px 15px; 
+   top:20px;
+   right:20px;
+   position:absolute;
+}
+.subjudul{
+    margin-top:30px;
+}
+.variabeltabel{
+   border: 2px solid #d4d4d4;
+   font-size: 16px;
+   vertical-align: text-top;
+    text-align: left;
+    margin-bottom: 100px;
+}
+.variabel , .nilaivariabel{
+   width:300px;
+   color:#5f6061;
+   padding :7px 14px;
+   border: 2px solid #d4d4d4;
+}
+.ulInfo{
+    text-align:left; 
+    width:80%; 
+    margin-left:7%;
+    margin-bottom: 100px;
+}
+.ulInfo li{
+    background: transparent url("/images/icon_arrow_right_small.png") no-repeat scroll 2px 4px;
+    padding-left: 18px;
+    padding-bottom:2px;
+}
