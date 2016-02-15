@@ -30,6 +30,11 @@ hr{
 /*    border : 1px solid #e7e7e7;*/
     width:100%;
 }
+.error{
+    color: red;
+    float: left;
+    margin-top:-80px;
+}
 #loginhr{
     margin-top: 10px;
     margin-bottom: 10px;

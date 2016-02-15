@@ -12,21 +12,24 @@ dibuat oleh gazandi cahyadarma
     </h2>
 </div>
 <br>   
-        <form  action="../controller/InputBarang.php" method="POST" >
+        <form name="barang" onsubmit="return validateBarangForm()" action="../controller/InputBarang.php" method="POST" >
             <br>
             <div style="float:left; margin-left: 50px ">
             <table class="listform" >
                 <tr>
                     <td><h3>Nama barang:</h3></td>
-                    <td><input id="nama_barang" name="nama_barang"  type="text" class="form" value=""></td>
+                    <td><input id="nama_barang" name="nama_barang"  type="text" class="form" value="">
+                    <span id="nama_barangErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Status:</h3></td>
-                    <td><input id="status" name="status"  type="text" class="form" value=""></td>
+                    <td><input id="status" name="status"  type="text" class="form" value="">
+                    <span id="statusErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Lokasi:</h3></td>
-                    <td><input id="lokasi" name="lokasi"  type="text" class="form" value=""></td>
+                    <td><input id="lokasi" name="lokasi"  type="text" class="form" value="">
+                    <span id="lokasiErr" class="error">*</span></td>
                 </tr>
             </table>
             </div>
@@ -39,4 +42,5 @@ dibuat oleh gazandi cahyadarma
     
 </section>
 </body>
+<script src="../assets/js/validate.js"></script>
 </html>

@@ -15,29 +15,34 @@ dibuat oleh gazandi cahyadarma
 
 <br>
          
-        <form action="../controller/InputUser.php" method="POST">
+        <form name="user" onsubmit="return validateUserForm()" action="../controller/InputUser.php" method="POST">
             <br>
             <div style="float:left; margin-left:-150px">
             <table class="listform" >
                 <tr>
                     <td><h3>No_identitas :</h3></td>
-                    <td><input id="no_identitas" name="no_identitas"  type="text" class="form" value=""></td>
+                    <td><input id="no_identitas" name="no_identitas"  type="text" class="form" value="">
+                    <span id="no_identitasErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Nama user:</h3></td>
-                    <td><input id="namauser" name="namauser"  type="text" class="form" value=""></td>
+                    <td><input id="namauser" name="namauser"  type="text" class="form" value="">
+                    <span id="namauserErr" class="error">*</span></td></td>
                 </tr>
                 <tr>
                     <td><h3>Pekerjaan:</h3></td>
-                    <td><input id="pekerjaan" name="pekerjaan"  type="text" class="form" value=""></td>
+                    <td><input id="pekerjaan" name="pekerjaan"  type="text" class="form" value="">
+                    <span id="pekerjaanErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Alamat:</h3></td>
-                    <td><input id="alamat" name="alamat"  type="text" class="form" value=""></td>
+                    <td><input id="alamat" name="alamat"  type="text" class="form" value="">
+                    <span id="alamatErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Telepon:</h3></td>
-                    <td><input id="telepon" name="telepon"  type="text" class="form" value=""></td>
+                    <td><input id="telepon" name="telepon"  type="text" class="form" value="">
+                    <span id="teleponErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Fakultas:</h3></td>
@@ -53,9 +58,8 @@ dibuat oleh gazandi cahyadarma
             <input type="submit"   style="position:absolute; margin-top: -70px;
                    " class="submit" value="Insert">
         </form>
-
     </div>
-    
 </section>
 </body>
+<script src="../assets/js/validate.js"></script>
 </html>

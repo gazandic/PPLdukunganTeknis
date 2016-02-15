@@ -22,34 +22,38 @@ dibuat oleh gazandi cahyadarma
         $nama_barang = $Model->getFromLink($_GET['nama_barang']);
         }
     ?>
-        <form action="../controller/InputPemesanan.php" method="POST">
+        <form name="Peminjaman" onsubmit="return validatePeminjamanForm()" action="../controller/InputPemesanan.php" method="POST">
             <?php if(isset($_GET['id_barang'])){ ?><br>
             <input id="hidden" name="id_barang" type="hidden" value="<?=$id_barang?>">
             <label for="hidden" style="background-color: #f1f1f1; padding:10px 10px; margin-left:-800px">Barang yang dipesan : <?=$nama_barang?></label>
             <?php } ?>
             <br>
             <div style="float:left; margin-left:-150px">
-            
             <table class="listform" >
                 <tr>
                     <td><h3>No_identitas :</h3></td>
-                    <td><input id="no_identitas" name="no_identitas"  type="text" class="form" value=""></td>
+                    <td><input id="no_identitas" name="no_identitas"  type="text" class="form" value="">
+                    <span id="no_identitasErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Nama user:</h3></td>
-                    <td><input id="namauser" name="namauser"  type="text" class="form" value=""></td>
+                    <td><input id="namauser" name="namauser"  type="text" class="form" value="">
+                    <span id="namauserErr" class="error">*</span></td></td>
                 </tr>
                 <tr>
                     <td><h3>Pekerjaan:</h3></td>
-                    <td><input id="pekerjaan" name="pekerjaan"  type="text" class="form" value=""></td>
+                    <td><input id="pekerjaan" name="pekerjaan"  type="text" class="form" value="">
+                    <span id="pekerjaanErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Alamat:</h3></td>
-                    <td><input id="alamat" name="alamat"  type="text" class="form" value=""></td>
+                    <td><input id="alamat" name="alamat"  type="text" class="form" value="">
+                    <span id="alamatErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Telepon:</h3></td>
-                    <td><input id="telepon" name="telepon"  type="text" class="form" value=""></td>
+                    <td><input id="telepon" name="telepon"  type="text" class="form" value="">
+                    <span id="teleponErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Fakultas:</h3></td>
@@ -64,11 +68,17 @@ dibuat oleh gazandi cahyadarma
             <table class="listform">
                 <tr>
                     <td><h3>Status:</h3></td>
-                    <td><input id="status" name="status"  type="text" class="form" value=""></td>
+                    <td><input id="status" name="status"  type="text" class="form" value="">
+                    <span id="statusErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Tanggal awal:</h3></td>
-                    <td><input id="tglawal" name="tglawal"  type="date" class="form" ></td>
+                    <td><input id="tglawal" name="tglawal"  type="date" class="form" >
+                    <span id="tglawalErr" class="error">*</span></td>
+                </tr>
+                <tr>
+                    <td><h3>Tanggal akhir:</h3></td>
+                    <td><input id="tglakhir" name="tglakhir"  type="date" class="form" ></td>
                 </tr>
             </table>
             </div>
@@ -87,4 +97,5 @@ dibuat oleh gazandi cahyadarma
     
 </section>
 </body>
+<script src="../assets/js/validate.js"></script>
 </html>
