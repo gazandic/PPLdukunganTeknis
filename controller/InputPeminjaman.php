@@ -33,7 +33,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   $peminjamanModel = new Peminjaman();
-  $peminjamanModel->add($id_barang, $id_user, $status, $tgl_awal, $tgl_akhir);
+  foreach($id_barang as $asd){
+   $peminjamanModel->add($asd, $id_user, $status, $tgl_awal, $tgl_akhir);
+  }
   $barangModel = new Barang();
   $barangModel->dipinjam($id_barang);
 }

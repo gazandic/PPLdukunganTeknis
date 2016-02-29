@@ -37,7 +37,7 @@ dibuat oleh gazandi cahyadarma
         <div id="navcontainer">
         <div id="headerframe" style="background-color: #ef1100;">
         <div class="brand" style="float: left;margin-left:100px">
-        <a href="">
+        <a href="../view/statistik.php">
             <img id="logo"  src="../assets/img/iduktek.png" >
         </a>
         </div>

@@ -23,8 +23,15 @@ dibuat oleh gazandi cahyadarma
                 </tr>
                 <tr>
                     <td><h3>Status:</h3></td>
-                    <td><input id="status" name="status"  type="text" class="form" value="">
-                    <span id="statusErr" class="error">*</span></td>
+                    <td>
+                    <!-- <input id="status" name="status"  type="text" class="form" value="">
+                    <span id="statusErr" class="error">*</span> -->
+                    <select id="status" name="status" class="form">
+                            <option value="ada">ada</option>
+                            <option value="diperbaiki">diperbaiki</option>
+                            <option value="rusak">rusak</option>
+                    </select>
+                    </td>
                 </tr>
                 <tr>
                     <td><h3>Lokasi:</h3></td>

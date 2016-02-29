@@ -18,21 +18,25 @@ dibuat oleh gazandi cahyadarma
     require_once '../model/model.php';
         $Model = new Model();
         if(isset($_GET['id_barang'])){ 
-        $id_barang = $Model->getFromLink($_GET['id_barang']);
-        $nama_barang = $Model->getFromLink($_GET['nama_barang']);
+        //$id_barang = $Model->getFromLink($_GET['id_barang']);
+                $barangNama = $_GET['nama_barang'];
+                $barangID = $_GET['id_barang'];
+                //$nama_barang = $Model->getFromLink($_GET['nama_barang']);
         }
     ?>
         <form name="Peminjaman" onsubmit="return validatePeminjamanForm()" action="../controller/InputPeminjaman.php" method="POST">
-            <?php if(isset($_GET['id_barang'])){ ?><br>
-            <input id="hidden" name="id_barang" type="hidden" value="<?=$id_barang?>">
-            <label for="hidden" style="background-color: #f1f1f1; padding:10px 10px; margin-left:-800px">Barang yang dipinjam : <?=$nama_barang?></label>
-            <?php } ?>
+            <?php if(isset($_GET['id_barang'])){ foreach($barangID as $id_barang){?>
+            <input id="hidden" name="id_barang[]" type="hidden" value="<?=$id_barang?>">
+            <?php }foreach($barangNama as $nama_barang){?> <br>
+            <label for="hidden" style="background-color: #f1f1f1; padding:10px 10px;">Barang yang dipinjam : <?=$nama_barang?></label>
+            <br>
+            <?php }} ?>
             <br>
             <div style="float:left; margin-left:-150px">
             <table class="listform" >
                 <tr>
                     <td><h3>No_identitas :</h3></td>
-                    <td><input id="no_identitas" name="no_identitas"  type="text" class="form" value=""><span id="no_identitasErr" class="error">*</span></td>
+                    <td><input onchange="autoFill(this.value)" id="no_identitas" name="no_identitas"  type="text" class="form" value=""><span id="no_identitasErr" class="error">*</span></td>
                 </tr>
                 <tr>
                     <td><h3>Nama user:</h3></td>
@@ -67,8 +71,12 @@ dibuat oleh gazandi cahyadarma
             <table class="listform">
                 <tr>
                     <td><h3>Status:</h3></td>
-                    <td><input id="status" name="status"  type="text" class="form" value="">
-                    <span id="statusErr" class="error">*</span></td>
+                    <td>
+                    <select id="status" name="status" class="form">
+                        <option value="sedang dipinjam">sedang dipinjam</option>
+                        <span id="statusErr" class="error">*</span>
+                    </select>
+                    </td>
                 </tr>
                 <tr>
                     <td><h3>Tanggal awal:</h3></td>

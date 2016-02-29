@@ -8,10 +8,10 @@ dibuat oleh gazandi cahyadarma
         <script src="assets/js/chartupload.js">
 </script>
 <div id="judul"><h2 style="color: #ef1100">       
-        <a style="margin-left: 130px" >User</a> 
-        <a href="tambahuser.php">
+        <a style="margin-left: 0px" >User</a> 
+        <!-- <a href="tambahuser.php">
             <button class="submit"  style=" positon:fixed; left:300px"  >Tambah user</button></a>
-    </h2>
+     --></h2>
 </div>
 <br>
 <table class="list">

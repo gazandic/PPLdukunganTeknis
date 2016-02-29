@@ -27,10 +27,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   $arr2 = $userModel->getWithNumber($no_identitas); 
   foreach ($arr2 as $key) {
-  	$id_user = $key["id_user"];
+    $id_user = $key["id_user"];
   }
   $pemesananModel = new Pemesanan();
-  $pemesananModel->add($id_barang, $id_user, $status, $tgl_awal);
+  foreach($id_barang as $asd){
+    $pemesananModel->add($asd, $id_user, $status, $tgl_awal);
+  }
 }
 header("Location: ../view/pemesanan.php");
 exit();

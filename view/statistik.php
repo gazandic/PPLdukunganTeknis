@@ -1,7 +1,7 @@
 <!-- 
 dibuat oleh gazandi cahyadarma
 2/9/2016
- -->
+ --> 
 <?php include "header.php"; 
         require_once '../model/statistik.php';
         $statistikModel = new Statistik();

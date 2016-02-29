@@ -14,6 +14,7 @@ dibuat oleh gazandi cahyadarma
 </div>
 
 <br>
+<form action="../controller/InputMultiDataBarang.php" method="POST">
 <table class="list" style="width: 80%">
     <?php
         require_once '../model/barang.php';
@@ -21,6 +22,7 @@ dibuat oleh gazandi cahyadarma
         $listbarang = $barangModel->getAllAda();
         if(!empty($listbarang)){
         ?>
+
         <tr class="headerlist" >
             <td>Nama Barang</td>
             <td >Lokasi</td>
@@ -31,7 +33,10 @@ dibuat oleh gazandi cahyadarma
         <?php }else{
         ?>
         <h2>Barang kosong</h2>
-        <?php }
+        
+        <?php } ?> 
+
+        <?php
         foreach($listbarang as $row) {
       ?>
         <tr>
@@ -39,20 +44,18 @@ dibuat oleh gazandi cahyadarma
           <td><?=$row["lokasi"]?></td>
           <td><?=$row["status"]?></td>
           <td><?=$row["jumlah_rusak"]?></td>
-          <td><a href="tambahpemesanan.php?id_barang=<?=$row["id_barang"]?>&nama_barang=<?=$row["nama_barang"]?>"><button class="submit" style='padding:0px 5px'  >Tambah</button></a></td>
-        </tr>
+          <td><input type="checkbox" name="barang[]" value="id_barang[]=<?=$row["id_barang"]?>&nama_barang[]=<?=$row["nama_barang"]?>"></td>
+          </tr>
       <?php 
       }
     ?>
+  
+    
         </table>
-        <div style="height:30px"></div>
-        <?php for($z=0;$z<9;$z++){ ?>
-         
-        <a class="listpag" href="#"><?php echo $z+1;?></a>
-         <?php } ?>
-        
-        <div style="height:30px"></div>
-        
+        <br>
+        <br>
+         <input id="SSbutton" type="submit" name="Submit" value="Submit">
+      </form>  
 
     </div>
     

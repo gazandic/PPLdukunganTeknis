@@ -14,6 +14,7 @@ dibuat oleh gazandi cahyadarma
 </div>
 
 <br>
+<form action="../controller/InputMultiDataBarang2.php" method="POST">
 <table class="list" style="width: 80%">
     <?php
         require_once '../model/barang.php';
@@ -39,14 +40,16 @@ dibuat oleh gazandi cahyadarma
           <td><?=$row["lokasi"]?></td>
           <td><?=$row["status"]?></td>
           <td><?=$row["jumlah_rusak"]?></td>
-          <td><a href="tambahpeminjaman.php?id_barang=<?=$row["id_barang"]?>&nama_barang=<?=$row["nama_barang"]?>"><button class="submit" style='padding:0px 5px'  >Tambah</button></a></td>
-        </tr>
+          <td><input type="checkbox" name="barang[]" value="id_barang[]=<?=$row["id_barang"]?>&nama_barang[]=<?=$row["nama_barang"]?>"></td>
+          </tr>
       <?php 
       }
     ?>
         </table>
-        
-
+        <br>
+        <br>
+         <input id="SSbutton" type="submit" name="Submit" value="Submit">
+        </form>
     </div>
     
 </section>

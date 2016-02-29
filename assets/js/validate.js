@@ -145,3 +145,35 @@ function validateBarangForm() {
     return v;
 }
 
+
+function autoFill(no) {
+    var xmlhttp ;
+    var url = "../controller/cekAdaUser.php?no_identitas="+no;
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            rubah(xmlhttp.responseText);
+        }
+    }
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+}
+
+
+function rubah(response) {
+    //window.alert(response);
+    var arr = JSON.parse(response);
+    document.getElementById("namauser").value = arr.nama_user; 
+    document.getElementById("alamat").value = arr.alamat; 
+    document.getElementById("pekerjaan").value = arr.pekerjaan;
+    document.getElementById("telepon").value = arr.telepon; 
+    document.getElementById("fakultas").value = arr.fakultas; 
+    document.getElementById("jurusan").value = arr.jurusan; 
+    
+}

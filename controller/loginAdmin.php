@@ -9,8 +9,8 @@ dibuat oleh gazandi cahyadarma
     $username = $Model->getFromLink($_POST['username']);
     $password = $Model->getFromLink($_POST['password']);
     if($username=="admin"&&$password=="duktekitb"){
-    	session_start();
-    	$_SESSION["user"] = "admin";
+    	session_start(); 
+        $_SESSION["user"] = "admin";
     	header("Location: ../view/statistik.php");
     }
     else{

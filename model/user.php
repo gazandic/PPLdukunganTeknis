@@ -1,7 +1,3 @@
-<!-- 
-dibuat oleh gazandi cahyadarma
-2/9/2016
- -->
 <?php
 require_once 'model.php';
 class User extends Model {
